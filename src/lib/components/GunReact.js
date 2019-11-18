@@ -41,9 +41,7 @@ const GunReact = (Comp, config = null) => {
                 .then((res) => {
                     this.setState({ requesting: true });
                     let GunService = window.Gun({ localStorage: false })
-                    GunService.get('testData').put({
-                        value: "My Firstname is Precious",
-                    });
+                   
                     this.setState({ GunReact: GunService }, () => {
                         this.setState({ requesting: false })
                     });
