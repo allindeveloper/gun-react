@@ -1,6 +1,6 @@
 ## gun-react
 
-This is a React library for Gun wish was adapted from https://gun.eco/
+This is a React library for Gun which was adapted from https://gun.eco/
 
 
 
