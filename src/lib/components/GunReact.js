@@ -40,7 +40,7 @@ const GunReact = (Comp, config = null) => {
                     fetch("/config.json")
                 .then((res) => {
                     this.setState({ requesting: true });
-                    let GunService = window.Gun({ localStorage: false })
+                    let GunService = window.Gun({ localStorage: false, ...config })
                    
                     this.setState({ GunReact: GunService }, () => {
                         this.setState({ requesting: false })
