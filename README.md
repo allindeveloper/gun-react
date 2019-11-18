@@ -1,6 +1,6 @@
 ## gun-react
 
-This is a React library for Gun
+This is a React library for Gun wish was adapted from https://gun.eco/
 
 
 
@@ -9,7 +9,7 @@ This is a React library for Gun
 This React library exposes the all Gun functionalities.
 
 ### Note
-You can check the src/examples from the project directory for assistance.
+For more Information, please check out the Github page here https://github.com/amark/gun 
 
 ### Install
 ```
