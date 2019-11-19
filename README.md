@@ -40,6 +40,9 @@ let config = {
 }
 const App = (props) => {
 
+  const[firstName, setFirstName] = useState('');
+  const[lastName, setLastName] = useState('');
+  const[age, setAge] = useState(''); 
   React.useEffect(()=>{
     let { GunService } = props;
     if(GunService){
@@ -71,26 +74,23 @@ const App = (props) => {
 
   return (
       <div>
-              <label>Firstname</label>
-                <input id="textinput" name="firstname" onChange={e => setFirstName(e.target.value)} 
-                type="text"></input><br/>
+          <label>Firstname</label>
+          <input id="textinput" name="firstname" onChange={e => setFirstName(e.target.value)} 
+          type="text"></input><br/>
           
-              <label>Lastname</label>
-                <input id="textinput" name="lastname" type="text" onChange={e => setLastName(e.target.value)} 
-               ></input><br/>
+          <label>Lastname</label>
+          <input id="textinput" name="lastname" type="text" onChange={e => setLastName(e.target.value)} 
+          ></input><br/>
            
-              <label >Age</label>
-                <input id="textinput" name="age" type="number" placeholder="Age" onChange={e => setAge(e.target.value)}
-                 ></input><br/>
+          <label >Age</label>
+          <input id="textinput" name="age" type="number" placeholder="Age" onChange={e => setAge(e.target.value)}
+          ></input><br/>
           
-                <button  onClick={submitValue} class="btn btn-success">Ok</button>
-            </div>
-   
+         <button  onClick={submitValue} class="btn btn-success">Ok</button>
+         </div>
   );
 }
 //GunReact accepts the normal Gun Configuration and a Component to Render and then returns GunService as a Property
-
-
 
 export default GunReact(App, config);
 
