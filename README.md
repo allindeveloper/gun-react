@@ -90,7 +90,8 @@ const App = (props) => {
          </div>
   );
 }
-//GunReact accepts the normal Gun Configuration and a Component to Render and then returns gunService as a Property
+// just bind useGun();
+//useGun accepts the normal Gun Configuration and a Component to Render and then returns gunService as a Property
 
 export default useGun(App, config);
 
