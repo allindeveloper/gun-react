@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GunReact = (Comp, config = null) => {
+const useGun = (Comp, config = null) => {
     return class createHoc extends React.Component {
 
         constructor(props) {
@@ -210,4 +210,4 @@ const GunReact = (Comp, config = null) => {
     }
 
 }
-export default GunReact;
+export default useGun;

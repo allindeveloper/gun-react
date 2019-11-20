@@ -1,5 +1,5 @@
-import GunReact from './components/GunReact';
+import useGun from './components/GunReact';
 
 export {
-  GunReact
+  useGun
 };

@@ -22,7 +22,7 @@ npm install --save gun-react
 ```javascript
 
 import React, { useState } from "react";
-import { GunReact } from 'gun-react'
+import { useGun } from 'gun-react'
 
 let config = {
   s3: {
@@ -92,7 +92,7 @@ const App = (props) => {
 }
 //GunReact accepts the normal Gun Configuration and a Component to Render and then returns GunService as a Property
 
-export default GunReact(App, config);
+export default useGun(App, config);
 
 
 ```

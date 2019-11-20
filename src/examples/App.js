@@ -1,5 +1,5 @@
 import React from "react";
-import {GunReact} from "../lib";
+import {useGun} from "../lib";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,5 +22,5 @@ class App extends React.Component {
   }
 }
 
-export default GunReact(App);
+export default useGun(App);
 // export default App;
