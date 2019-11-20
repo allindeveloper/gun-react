@@ -44,9 +44,9 @@ const App = (props) => {
   const[lastName, setLastName] = useState('');
   const[age, setAge] = useState(''); 
   React.useEffect(()=>{
-    let { GunService } = props;
-    if(GunService){
-      GunService.get('user').on((data, key) => {
+    let { gunService } = props;
+    if(gunService){
+      gunService.get('user').on((data, key) => {
       console.log("previously saved data", data)
     });
   }
@@ -58,12 +58,12 @@ const App = (props) => {
       'LastName': lastName,
       'Age': age,
     }
-    let { GunService } = props;
-    GunService.get('user').put({
+    let { gunService } = props;
+    gunService.get('user').put({
       ...formDetails
     });
 
-    GunService.get('user').on((data, key) => {
+    gunService.get('user').on((data, key) => {
       console.log("saved data", data)
       let result = data; // you can now get the saved data right here
 
@@ -90,7 +90,7 @@ const App = (props) => {
          </div>
   );
 }
-//GunReact accepts the normal Gun Configuration and a Component to Render and then returns GunService as a Property
+//GunReact accepts the normal Gun Configuration and a Component to Render and then returns gunService as a Property
 
 export default useGun(App, config);
 
